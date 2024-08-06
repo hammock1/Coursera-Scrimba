@@ -1,0 +1,52 @@
+body{
+
+font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+padding : 30px;
+text-align : center;
+height: 100vh;
+			
+}
+
+.container{
+
+
+padding : 10px;
+max-width : 80%;
+margin : auto;	
+border : 3px solid lightgrey;
+border-radius : 20px;
+	
+	
+}
+img{
+margin-top:40px;
+width : 400px;
+	
+	
+}
+p{
+	
+font-weigt : 600;
+margin-top : 25px;
+margin-botton : 5px;
+			
+	
+}
+button{
+background : beige;
+color : black;
+margin-top : 10px;
+border : 1px solid lightgrey;
+padding : 20px 36px;
+font-weight : bold;
+cursor : pointer;
+border-radius : 20px;	
+font-family:  Arial
+}
+
+#error {
+color : red;
+font-weight : 200;	
+	
+	
+}
