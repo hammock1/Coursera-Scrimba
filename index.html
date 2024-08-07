@@ -3,14 +3,25 @@
 	<head>
 		<link rel="stylesheet" href="index.css">
 	</head>
+
+
 	<body>
-	    <div class="container">
-			<img src="redShoe.jpg" alt="Nike shoe">
-			<p>Red Shoes</p>
-			<button onclick="errorMessage()">Purchase  -  $149</button>
-			<p id="error"></p>
+		<div class="container">
+			<span id="num1-el"></span>
+			<span id="num2-el"></span>
+			</br>
+			</br>
+			<button onclick="add()">Add</button>
+			<button onclick="subtract()">Subtract</button>
+			<button onclick="divide()">Divide</button>
+			<button onclick="multiply()">Multiply</button>
+			</br>
+			</br>
+			
+			Sum: <span id="sum-el"></span> 
 		</div>
-		<script src="index.js"></script>
+		<script src="index.js"></script>		
 	</body>
+
 
 </html>
