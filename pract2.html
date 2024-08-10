@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+	<style>
+	body {
+    padding: 40px;
+    background: whitesmoke;
+    text-align: center;
+}
+
+#apple-shelf {
+    background: lightcoral;
+    border-radius: 10px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+#orange-shelf {
+    background: lightsalmon;
+    border-radius: 10px;
+    height: 40px;
+}
+		
+		</style>
+    </head>
+    <body>
+        <div id="apple-shelf"></div>  
+        <div id="orange-shelf"></div>
+        <script>
+		
+var fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+var appleShelf = document.getElementById("apple-shelf")
+var orangeShelf = document.getElementById("orange-shelf")
+
+function arrange (){
+
+	for (var i = 0; i < fruit.length; i++){
+     
+		 if(fruit[i] === "🍎"){
+		   appleShelf.textContent += "🍎";
+		   
+		 }else{
+		 
+		  orangeShelf.textContent += "🍊";
+		 
+		 }
+
+
+	}
+
+
+}
+
+arrange ();
+
+
+// Create a function that puts the apples onto the appleShelf
+// and the oranges onto the orangeShelf. Use a for loop,
+// a conditional statement, and the textContent property.
+		
+		</script>
+    </body>
+</html>

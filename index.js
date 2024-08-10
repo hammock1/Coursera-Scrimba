@@ -1,27 +1,97 @@
-let num1 = 8;
-let num2 = 2
-document.getElementById("num1-el").textContent = num1;
-document.getElementById("num2-el").textContent = num2;
-var para = document.getElementById("sum-el");
-function add(){
+
+let cards = [];
+let hasBlackJack = false;
+let isAlive = false;
+let message = "";
+let sum = 0;
+let messageEl = document.getElementById("message-el");
+let sumEl = document.querySelector("#sum-el");
+let cardsEl= document.querySelector("#cards-el");
+//let playerName = "Per";
+//let playerChips = 145;
+
+let player = {
 	
-para.textContent =  (num1 + num2);	
+ playerName : "Per",
+ playerChips : 145,	
+	
+};
+
+let playerEl = document.getElementById("play-el");
+playerEl.textContent = player.playerName + ": $" + player.playerChips;
+
+function startGame(){
+isAlive = true;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
+sum = firstCard  + secondCard;
+cards = [firstCard, secondCard];
+	
+renderGame();	
+	
+	
 }
 
-function subtract(){
+function getRandomCard(){
+var num = Math.floor(Math.random ()* 13) + 1;
 	
-para.textContent =  (num1 - num2);
+	if(num === 1){
+	
+      num = 11;	
+		
+	}else if(num > 10){
+		
+	  num = 10;
+	}
+	
+	return num;
+}
+
+function renderGame(){
+cardsEl.textContent = "Cards: ";
+	
+for (var i = 0; i < cards.length; i+=1){
+cardsEl.textContent  += cards[i] + " ";	
 	
 }
 
-function divide(){
+	sumEl.textContent = "Sum: " + sum;
+	
+	if(sum <= 20){
+		
+	message = "Do you want to draw a new card";	
+	}else if(sum === 21){
 
-para.textContent =  (num1 / num2);
+	message = "You've got Blackjack";	
+	hasBlackJack = true;	
+		
+	}else {
+
+	message = "You're out of the game";
+	isAlive = false;	
+		
+	}	
+		
+		
+   messageEl.textContent = message; 		
+		
+	
+	
 }
 
-function multiply(){
+
+function newCard(){
+
+if(isAlive=== true && hasBlackJack===false){
+
+
+
+	var card = getRandomCard();
+	sum += 	card;
+	cards.push(card)
+	renderGame();
 	
-para.textContent =  (num1 * num2);
 	
+	}
 	
 }
